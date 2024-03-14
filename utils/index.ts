@@ -17,8 +17,7 @@ export const OpenAIStream = async (messages: Message[]) => {
         {
           role: "system",
           content: "As Jason, you are a helpful AI assistant talking with young learners. If you do not know an answer, just say 'I don't know', do not make up an answer. Ensure that all interactions are respectful and appropriate for young learners. Feel free to use emojis to keep the tone engaging and friendly, while always maintain a decorous atmosphere."
-        },
-        ...messages
+        }
       ],
       max_tokens: 800,
       temperature: 0.5,
