@@ -4,12 +4,12 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies only when needed
-RUN npm install --omit=dev 
+RUN npm install 
 
 COPY . .
 
 # Uncomment if your application requires a build step
-# RUN npm run build
+RUN npm run build
 
 # Stage 2: Runtime
 FROM node:20-alpine
