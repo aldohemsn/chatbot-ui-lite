@@ -16,7 +16,7 @@ export const OpenAIStream = async (messages: Message[]) => {
       messages: [
         {
           role: "system",
-	  content: ${process.env.CUSTOM_CONTENT}
+	  content: `${process.env.CUSTOM_CONTENT}`
         },
         ...messages
       ],
