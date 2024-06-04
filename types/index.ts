@@ -1,6 +1,8 @@
-export enum OpenAIModel {
-  DAVINCI_TURBO = "gpt-4o"
-}
+const GPT_MODEL = process.env.GPT_MODEL || "gpt-4o";
+
+export const OpenAIModel = {
+  DAVINCI_TURBO: GPT_MODEL
+};
 
 export interface Message {
   role: Role;
