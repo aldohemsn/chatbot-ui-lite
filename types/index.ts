@@ -1,5 +1,5 @@
 export enum OpenAIModel {
-  DAVINCI_TURBO = "gpt-4"
+  DAVINCI_TURBO = "gpt-4o"
 }
 
 export interface Message {
