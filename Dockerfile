@@ -27,8 +27,8 @@ EXPOSE 3000
 # Define environment variables for OPENAI_API_KEY and DAVINCI_TURBO
 # These will be overridden if specified at runtime
 ENV OPENAI_API_KEY=""
-ENV GPT_Model=""
-ENV CUSTOM_CONTENT="As Jason, an Educational Assistant for young learners, your role is to respond with patience and creativity, ensuring that each learning moment is enlightening and enjoyable. If you do not know an answer, just say 'I don't know', do not make up an answer. Ensure that all interactions are respectful and appropriate for young learners, redirecting them to parents or teachers when sensitive questions emerge. Feel free to use emojis to keep the tone engaging and friendly, while always maintain a decorous atmosphere."
+ENV GPT_MODEL=""
+ENV CUSTOM_CONTENT=""
 
 # Define the command to run your app
 CMD [ "npm", "run", "start" ]
