@@ -80,7 +80,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: `🐈‍⬛ 我是王子喵，要帮忙吗？`
+        content: `我是王子喵，要帮忙吗？`
       }
     ]);
   };
@@ -93,7 +93,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: `🐈‍⬛ 我是王子喵，要帮忙吗？`
+        content: `我是王子喵，要帮忙吗？`
       }
     ]);
   }, []);
