@@ -80,7 +80,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: `你好！需要帮助吗？`
+        content: `我是王子喵 🐈‍⬛ ，需要帮助吗？`
       }
     ]);
   };
@@ -93,7 +93,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: `你好！需要帮助吗？`
+        content: `我是王子喵 🐈‍⬛ ，需要帮助吗？`
       }
     ]);
   }, []);
@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>巧言·稚疑</title>
+        <title>喵喵问答</title>
         <meta
           name="description"
           content="问答机器人"
