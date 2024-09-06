@@ -8,7 +8,7 @@ export const Navbar: FC = () => {
           className="ml-2 hover:opacity-50"
           title=""
         >
-          🌸🌼🌻🌺🌹🌷
+          🌸🌼🌺&#x1F408;&#x200D;&#x2B1B;🌹🌷
         </a>
       </div>
     </div>
