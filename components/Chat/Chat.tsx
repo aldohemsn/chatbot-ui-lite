@@ -1,5 +1,5 @@
-import { Message } from "@/types";
 import { FC } from "react";
+import { Message } from "@/types";
 import { ChatInput } from "./ChatInput";
 import { ChatLoader } from "./ChatLoader";
 import { ChatMessage } from "./ChatMessage";
@@ -21,10 +21,7 @@ export const Chat: FC<Props> = ({ messages, loading, onSend, onReset }) => {
 
       <div className="flex flex-col rounded-lg px-2 sm:p-4 sm:border border-neutral-300">
         {messages.map((message, index) => (
-          <div
-            key={index}
-            className="my-1 sm:my-1.5"
-          >
+          <div key={index} className="my-1 sm:my-1.5">
             <ChatMessage message={message} />
           </div>
         ))}
@@ -42,3 +39,4 @@ export const Chat: FC<Props> = ({ messages, loading, onSend, onReset }) => {
     </>
   );
 };
+

@@ -1,3 +1,18 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Optional: Markdown specific styling */
+.markdown {
+  @apply text-base;
+}
+
+.markdown code {
+  @apply bg-gray-200 text-red-500 p-1 rounded;
+}
+
+.markdown pre {
+  @apply bg-gray-900 text-white p-4 rounded my-2;
+}
+
