@@ -35,7 +35,8 @@ export default function Login() {
       </Head>
       <div className="flex items-center justify-center h-screen">
         <div className="p-6 bg-white rounded shadow-md">
-          <h1 className="mb-4 text-2xl font-bold">登录&#x1F408;&#x200D;&#x2B1B;
+          <h1 className="mb-4 text-2xl font-bold">登录 &#x1F9F6;
+ &#x1F408;&#x200D;&#x2B1B;
 </h1>
           <input
             type="password"
