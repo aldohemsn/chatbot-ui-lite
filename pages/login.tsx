@@ -28,6 +28,12 @@ export default function Login() {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleLogin();
+    }
+  };
+
   return (
     <>
       <Head>
@@ -42,6 +48,7 @@ export default function Login() {
             type="password"
             value={passcode}
             onChange={(e) => setPasscode(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="我是谁"
             className="w-full p-2 mb-4 border rounded"
           />
