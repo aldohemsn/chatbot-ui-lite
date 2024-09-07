@@ -1,5 +1,5 @@
 // pages/login.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
@@ -7,6 +7,11 @@ export default function Login() {
   const [passcode, setPasscode] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    // Debugging: Log environment variable on component mount
+    console.log("Environment variable NEXT_PUBLIC_PASSCODE:", process.env.NEXT_PUBLIC_PASSCODE);
+  }, []);
 
   const handleLogin = () => {
     console.log("Entered passcode:", passcode); // Debugging: Log entered passcode
