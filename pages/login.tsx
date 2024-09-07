@@ -24,7 +24,7 @@ export default function Login() {
       localStorage.setItem("isLoggedIn", "true");
       router.push("/");
     } else {
-      setError("Incorrect passcode. Please try again.");
+      setError("你不是我朋友");
     }
   };
 
@@ -35,12 +35,13 @@ export default function Login() {
       </Head>
       <div className="flex items-center justify-center h-screen">
         <div className="p-6 bg-white rounded shadow-md">
-          <h1 className="mb-4 text-2xl font-bold">Login</h1>
+          <h1 className="mb-4 text-2xl font-bold">登录&#x1F408;&#x200D;&#x2B1B;
+</h1>
           <input
             type="password"
             value={passcode}
             onChange={(e) => setPasscode(e.target.value)}
-            placeholder="Enter passcode"
+            placeholder="我是谁"
             className="w-full p-2 mb-4 border rounded"
           />
           {error && <p className="mb-4 text-red-500">{error}</p>}
