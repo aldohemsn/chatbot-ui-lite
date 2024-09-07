@@ -5,19 +5,25 @@ import Head from "next/head";
 
 export default function Login() {
   const [passcode, setPasscode] = useState("");
+  const [storedPasscode, setStoredPasscode] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
 
   useEffect(() => {
-    // Debugging: Log environment variable on component mount
-    console.log("Environment variable NEXT_PUBLIC_PASSCODE:", process.env.NEXT_PUBLIC_PASSCODE);
+    // Fetch the passcode from the custom API endpoint
+    fetch("/api/passcode")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Fetched passcode from API:", data.passcode); // Debugging: Log fetched passcode
+        setStoredPasscode(data.passcode);
+      });
   }, []);
 
   const handleLogin = () => {
     console.log("Entered passcode:", passcode); // Debugging: Log entered passcode
-    console.log("Expected passcode:", process.env.NEXT_PUBLIC_PASSCODE); // Debugging: Log expected passcode
+    console.log("Expected passcode:", storedPasscode); // Debugging: Log expected passcode
 
-    if (passcode === process.env.NEXT_PUBLIC_PASSCODE) {
+    if (passcode === storedPasscode) {
       localStorage.setItem("isLoggedIn", "true");
       console.log("Passcode correct. Redirecting to home page."); // Debugging: Log success message
       router.push("/");
