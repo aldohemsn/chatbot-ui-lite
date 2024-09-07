@@ -14,22 +14,17 @@ export default function Login() {
     fetch("/api/passcode")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Fetched passcode from API:", data.passcode); // Debugging: Log fetched passcode
         setStoredPasscode(data.passcode);
       });
   }, []);
 
   const handleLogin = () => {
-    console.log("Entered passcode:", passcode); // Debugging: Log entered passcode
-    console.log("Expected passcode:", storedPasscode); // Debugging: Log expected passcode
 
     if (passcode === storedPasscode) {
       localStorage.setItem("isLoggedIn", "true");
-      console.log("Passcode correct. Redirecting to home page."); // Debugging: Log success message
       router.push("/");
     } else {
       setError("Incorrect passcode. Please try again.");
-      console.log("Passcode incorrect."); // Debugging: Log failure message
     }
   };
 
