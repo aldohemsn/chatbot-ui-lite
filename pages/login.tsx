@@ -9,11 +9,16 @@ export default function Login() {
   const router = useRouter();
 
   const handleLogin = () => {
+    console.log("Entered passcode:", passcode); // Debugging: Log entered passcode
+    console.log("Expected passcode:", process.env.NEXT_PUBLIC_PASSCODE); // Debugging: Log expected passcode
+
     if (passcode === process.env.NEXT_PUBLIC_PASSCODE) {
       localStorage.setItem("isLoggedIn", "true");
+      console.log("Passcode correct. Redirecting to home page."); // Debugging: Log success message
       router.push("/");
     } else {
       setError("Incorrect passcode. Please try again.");
+      console.log("Passcode incorrect."); // Debugging: Log failure message
     }
   };
 
