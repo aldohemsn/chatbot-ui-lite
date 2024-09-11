@@ -5,7 +5,7 @@ export const OpenAIStream = async (messages: Message[]) => {
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
 
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+  const res = await fetch(`${process.env.AI_API_URL}/v1/chat/completions`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
